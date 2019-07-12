@@ -1,0 +1,25 @@
+server:
+  port: 6672
+spring:
+  application:
+    name: eam-demo
+  profiles:
+    active: dev
+  cloud:
+    config:
+      discovery:
+        service-id: eam-config-server
+        enabled: true
+      fail-fast: true
+      profile: ${spring.profiles.active}
+      label: ${spring.profiles.active}
+      name: ${spring.application.name}
+#logging:
+#  level:
+#    root: debug
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/

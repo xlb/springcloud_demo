@@ -1,0 +1,23 @@
+server:
+  port: 6671
+spring:
+  application:
+    name: eam-config-server
+  profiles:
+    active: native
+  # 配置中心
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/ 
+         
+ 
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
