@@ -1,0 +1,13 @@
+/config/target/classes/com/xulb/demo/*.class
+/*.classpath
+*.class
+*.classpath
+*.MF
+*.prefs
+/eureka/target/classes
+/demo-server/target/classes
+/config/target/classes/config
+/config/target/classes
+.settings
+*.project
+*.springBeans
